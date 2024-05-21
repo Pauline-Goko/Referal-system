@@ -1,0 +1,58 @@
+.landing-page {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
+    background-color: #f0f4f8;
+    height: 100vh;
+    box-sizing: border-box;
+  }
+  
+  .landing-page__image {
+    flex: 1;
+  }
+  
+  .landing-page__image img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .landing-page__content {
+    flex: 1;
+    padding: 20px;
+  }
+  
+  .landing-page__content h1 {
+    font-size: 3rem;
+    color: #2d2d2d;
+  }
+  
+  .landing-page__content p {
+    font-size: 1.25rem;
+    color: #6c757d;
+    margin: 20px 0;
+  }
+  
+  .landing-page__buttons {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+  
+  .btn--primary {
+    background-color: #007bff;
+    color: white;
+  }
+  
+  .btn--secondary {
+    background-color: #ffc107;
+    color: white;
+  }
+  
