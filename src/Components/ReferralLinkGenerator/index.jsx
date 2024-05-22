@@ -4,7 +4,7 @@ const ReferralLinkGenerator = () => {
     const [link, setLink] = useState('');
 
     const generateLink = async () =>{
-        const response = await fetch('http://localhost:8000/api/referral/generate/');
+        const response = await fetch('http:/localhost:8000/api/referral/generate/');
         const data = await response.json()
         setLink(data.link);
     
