@@ -12,7 +12,7 @@ const ReferralLinkGenerator = () => {
 
     return(
         <div>
-            <button onClick={generateLink}>Generate Referral</button>
+            <button onClick={generateLink}>Generate Referral Code</button>
             {link && (
                 <div>
                     <p>Your referral link: {link}</p>

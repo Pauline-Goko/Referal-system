@@ -1,59 +1,83 @@
+/* style.css */
+
 .landing-page {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 50px;
-    background-color: #f0f4f8;
-    height: 100vh;
-    box-sizing: border-box;
-  }
-  
-  .landing-page__image {
-    flex: 1;
-    width: 100%;
-  }
-  
-  .landing-page__image img {
-    max-width: 100%;
-    height: auto;
-  }
-  
-  .landing-page__content {
-    flex: 1;
-    padding: 20px;
-  }
-  
-  .landing-page__content h1 {
-    font-size: 3rem;
-    color: #2d2d2d;
-  }
-  
-  .landing-page__content p {
-    font-size: 1.25rem;
-    color: #6c757d;
-    margin: 20px 0;
-  }
-  
-  .landing-page__buttons {
-    display: flex;
-    gap: 20px;
-  }
-  
-  .btn {
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    font-size: 1rem;
-    cursor: pointer;
-  }
-  
-  .btn--primary {
-    background-color: #007bff;
-    color: white;
-  }
-  
-  .btn--secondary {
-    background-color: #ffc107;
-    color: white;
-  }
-  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  padding: 20px;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.landing-page__title {
+  font-size: 3rem;
+  position: relative; 
+  bottom: 6%;
+}
+
+.landing-page__content-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.landing-page__image {
+  flex: 1;
+}
+
+.landing-page__image img {
+  width: 100%;
+  height: auto;
+  max-height: 90vh; 
+  object-fit: cover;
+}
+
+.landing-page__content {
+  flex: 1;
+  padding: 20px;
+  text-align: center;
+}
+
+.landing-page__content h2 {
+  font-size: 5rem; 
+  margin-bottom: 20px;
+}
+
+.landing-page__content p {
+  font-size: 1.7rem; 
+  margin-bottom: 40px;
+}
+
+.landing-page__buttons {
+  display: flex;
+  flex-direction: row; 
+  justify-content: center; 
+  gap: 20px; 
+}
+
+
+.btn--primary {
+  background-color: #8139e0;
+  color: white;
+  border-radius: 7px;
+  cursor: pointer;
+  width: 30%; 
+  height: 45px;
+  font-size: 1rem;
+}
+
+.btn--secondary {
+  background-color: #df7fc2;
+  color: white;
+  border-radius: 7px;
+  cursor: pointer;
+  width: 15rem;
+  height: 45px;
+  font-size: 1rem;
+}
+
+

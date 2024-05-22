@@ -1,4 +1,5 @@
 import React, { useEffect, useState} from "react";
+import './style.css';
 
 const ReferralStatus = () => {
     const [status, setStatus] = useState({ referrals: 0, rewards: 0 });

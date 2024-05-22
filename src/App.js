@@ -1,18 +1,21 @@
 import React from 'react';
 import './App.css';
-import SignupForm from './Components/SignupForm';
-import ReferralStatus from './Components/ReferralStatus';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+
 import LandingPage from './Components/LandingPage';
+import SignUp from './Components/SignupForm';
 
 function App() {
   return (
-    <div className="App">
-      <h1>Referral System</h1>
-      <LandingPage />
-      <SignupForm />
-      <ReferralStatus />
-      
-    </div>
+    <Router>
+      <div className="App">
+       
+        <Routes>
+          <Route path="/" element={<LandingPage />} />
+          <Route path="/signin" element={<SignUp />} />
+        </Routes>
+      </div>
+    </Router>
   );
 }
 
