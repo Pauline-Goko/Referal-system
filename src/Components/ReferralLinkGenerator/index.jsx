@@ -1,26 +1,29 @@
-import React, { useState} from "react";
+import React, { useState } from "react";
 
 const ReferralLinkGenerator = () => {
-    const [link, setLink] = useState('');
+  const [referralCode, setReferralCode] = useState('');
 
-    const generateLink = async () =>{
-        const response = await fetch('http:/localhost:8000/api/referral/generate/');
-        const data = await response.json()
-        setLink(data.link);
-    
-    };
+  const generateLink = async () => {
+    const response = await fetch('http://127.0.0.1:8000/api/referral/generate/');
+    if (!response.ok) {
+      console.error('Failed to fetch referral code');
+      return; 
+    }
+    const data = await response.json();
+    setReferralCode(data.unique_code);
+  };
 
-    return(
+  return (
+    <div>
+      <button onClick={generateLink}>Generate Referral Code</button>
+      {referralCode && (
         <div>
-            <button onClick={generateLink}>Generate Referral Code</button>
-            {link && (
-                <div>
-                    <p>Your referral link: {link}</p>
-                    <button onClick={() => navigator.clipboard.writeText(link)}>Copy Link</button>
-                </div>
-            )}
+          <p>Your referral code: {referralCode}</p>
+          <button onClick={() => navigator.clipboard.writeText(referralCode)}>Copy Code</button>
         </div>
-    );
+      )}
+    </div>
+  );
 };
 
 export default ReferralLinkGenerator;
